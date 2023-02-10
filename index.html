@@ -5,12 +5,196 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BaiTapNopJS1</title>
+
+    <!-- BS4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
-<body>
+<body class="container">
+    <!-- Bài tập 1 -->
+    <div style="margin-bottom: 100px;">
+            <h3 class="mt-4">Bài 1</h3>
+            <div class="card w-75">
+                <div class="card-header bg-success text-center">
+                    <h4>Tính tiền lương nhân viên</h4>
+                </div>
+                <div class="card-body">
+                    <p class="mb-0">Kiến thức áp dụng:</p>
+                    <ul>
+                        <li>Công thức: Lương = Lương 1 ngày * Số ngày làm</li>
+                    </ul>
+                    <div class="form-group">
+                        <label for="oneDaySalary">Tiền lương 1 ngày:</label>
+                        <input type="number" class="form-control" id="oneDaySalary" placeholder="Nhập vào tiền lương 1 ngày">
+                    </div>
+                    <div class="form-group">
+                        <label for="numberWorkDay">Số ngày làm:</label>
+                        <input type="number" class="form-control" id="numberWorkDay" placeholder="Nhập vào số ngày làm">
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button id="btnCalcSalary" class="btn btn-success">Tính lương</button>
+                    <div class="mt-3 alert alert-dark text-left">
+                        Kết quả: <span id="totalSalary"></span>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <hr>
+    
+    <!-- Bài tập 2 -->
+    <div style="margin-bottom: 100px;">
+            <h3 class="mt-4">Bài 2</h3>
+            <div class="card w-75">
+                <div class="card-header bg-primary text-center">
+                    <h4>Tính giá trị trung bình</h4>
+                </div>
+                <div class="card-body">
+                    <p class="mb-0">Kiến thức áp dụng:</p>
+                    <ul>
+                        <li>Công thức: Số trung bình = ( N1 + N2 + N3 +... ) / Tổng số N</li>
+                    </ul>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="numberFirst" placeholder="Nhập số thứ 1">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="numberSecond" placeholder="Nhập số thứ 2">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="numberThird" placeholder="Nhập số thứ 3">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="numberFourth" placeholder="Nhập số thứ 4">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="numberFifth" placeholder="Nhập số thứ 5">
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button id="btnCalcAvegare" class="btn btn-primary">Tính trung bình</button>
+                    <div class="mt-3 alert alert-dark text-left">
+                        Kết quả: <span id="numberAverage"></span>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <hr>
+    
+    <!-- Bài tập 3 -->
+    <div style="margin-bottom: 100px;">
+            <h3 class="mt-4">Bài 3</h3>
+            <div class="card w-75">
+                <div class="card-header bg-secondary text-center">
+                    <h4>Quy đổi tiền</h4>
+                </div>
+                <div class="card-body">
+                    <p class="mb-0">Kiến thức áp dụng:</p>
+                    <ul>
+                        <li>Quy đổi USD sang VNĐ</li>
+                        <li>Giá USD mặc định 1 USD = 23.500 VNĐ</li>
+                    </ul>
+                    <div class="form-group">
+                        <label for="amountUSD">Số USD cần quy đổi:</label>
+                        <input type="number" class="form-control" id="amountUSD" placeholder="Nhập số tiền USD:">
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button id="btnCalcMoney" class="btn btn-secondary">Quy đổi tiền</button>
+                    <div class="mt-3 alert alert-dark text-left">
+                        Kết quả: <span id="totalMoney"></span>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <hr>
+    
+    <!-- Bài tập 4 -->
+    <div style="margin-bottom: 100px;">
+            <h3 class="mt-4">Bài 4</h3>
+            <div class="card w-75">
+                <div class="card-header bg-info text-center">
+                    <h4>Tính diện tích, chu vi hình chữ nhật</h4>
+                </div>
+                <div class="card-body">
+                    <p class="mb-0">Kiến thức áp dụng:</p>
+                    <ul>
+                        <li>Diện tích: dài x rộng</li>
+                        <li>Chu vi: (dài + rộng) x 2</li>
+                    </ul>
+                    <div class="form-group">
+                        <label for="length">Chiều dài:</label>
+                        <input type="number" class="form-control" id="length" placeholder="Nhập chiều dài:">
+                    </div>
+                    <div class="form-group">
+                        <label for="chieuRong">Chiều rộng:</label>
+                        <input type="number" class="form-control" id="width" placeholder="Nhập chiều rộng:">
+                    </div>
+    
+                </div>
+                <div class="card-footer text-center">
+                    <button id="btnCalc" class="btn btn-info">Tính</button>
+                    <div class="mt-3 alert alert-dark text-left">
+                        Kết quả: <span id="acreageAndPerimeter"></span>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <hr>
+    
+    <!-- Bài tập 5 -->
+    <div style="margin-bottom: 100px;">
+                <h3 class="mt-4">Bài 5</h3>
+                <div class="card w-75">
+                    <div class="card-header bg-dark text-center">
+                        <h4 class="text-white">Tính tổng 2 ký số</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-0">Kiến thức áp dụng:</p>
+                        <ul>
+                            <li>Ví dụ: 32</li>
+                            <li>Ta lấy 3 + 2 = 5</li>
+                        </ul>
+                        <div class="form-group">
+                            <input type="number" class="form-control" id="twoNumber" placeholder="Nhập số có 2 chữ số:">
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button id="btnCalcSum" class="btn btn-dark">Tính tổng</button>
+                        <div class="mt-3 alert alert-dark text-left">
+                            Kết quả: <span id="totalNumber"></span>
+                        </div>
+                    </div>
+                </div>
+    </div>
     
 
 
 
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Main JS -->
     <script src="./js/main.js"></script>
 </body>
 </html>
